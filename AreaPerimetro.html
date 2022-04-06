@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+ <head>
+    <link rel="stylesheet" type="text/css" href="js-css/bootstrap.min.css">
+    <script src="js-css/main.js"></script>
+    <link rel="shortcut icon" href="img/Logo.jpg">
+    <title>&Aacute;rea y Per&iacute;metro</title>     
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ </head>
+ <body>
+    <div class="jumbotron text-center">
+  <h4>Calcular Per&iacute;metro y &Aacute;rea de Pol&iacute;gonos</h4>
+  <p>Ingresa los datos necesarios para calcular</p> 
+  <button class="btn btn-info" onclick="alert(changelogArea)">Changelog</button>
+</div>
+<div class="container">
+<div class="row">
+<div class= "col-sm-3">
+    <!--Cuadrado-->
+    <h4>Cuadrado</h4>
+    <img src="img/Cuadrado.png" draggable = "false">
+    <br>
+    <label>Lado:</label>
+    <input id="ladoCuadrado" placeholder="Longitud Lado" class="form-control">
+    <br>
+    <button onclick="cuadrado()" class="btn btn-info">Calcular</button>
+    <div id="resultadoCuadrado"></div>
+    <br>
+</div>
+<div class= "col-sm-3">
+    <!--Triangulo-->
+    <h4>Tri&aacute;ngulo Conociendo Solo Los Lados</h4>
+    <img src="img/Triangulo.png" draggable = "false" width="50%">
+    <br>
+    <label>Lado 1:</label>
+    <input id="ladoUnoTriangulo" placeholder="Longitud Lado 1" class="form-control">
+    <br>
+    <label>Lado 2:</label>
+    <input id="ladoDosTriangulo" placeholder="Longitud Lado 2" class="form-control">
+    <br>
+    <label>Lado 3:</label>
+    <input id="ladoTresTriangulo" placeholder="Longitud Lado 3" class="form-control">
+    <br>
+    <button onclick="heron()" class="btn btn-info">Calcular</button>
+    <div id="resultadoHeronTriangulo"></div>
+    <br>
+</div>
+<div class= "col-sm-3">
+    <!--Triangulo-->
+    <h4>Tri&aacute;ngulo Conociendo Base Y Altura</h4>
+    <img src="img/Triangulo.png" draggable = "false" width="50%">
+    <br>
+    <label>Base:</label>
+    <input id="baseTriangulo" placeholder="Longitud Base" class="form-control">
+    <br>
+    <label>Altura:</label>
+    <input id="alturaTriangulo" placeholder="Longitud Altura" class="form-control">
+    <br>
+    <button onclick="triangulo()" class="btn btn-info">Calcular</button>
+    <div id="resultadoTriangulo"></div>
+    <br>
+</div>
+<div class= "col-sm-3">
+    <!--Rectangulo-->
+    <h4>Rect&aacute;ngulo</h4>
+    <img src="img/Rectangulo.jpg" draggable = "false" width="50%">
+    <br>
+    <label>Base:</label>
+    <input id="baseRectangulo" placeholder="Longitud Base" class="form-control">
+    <br>
+    <label>Altura:</label>
+    <input id="alturaRectangulo" placeholder="Longitud Altura" class="form-control">
+    <br>
+    <button onclick="rectangulo()" class="btn btn-info">Calcular</button>
+    <div id="resultadoRectangulo"></div>
+    <br>
+</div>
+<div class= "col-sm-3">
+    <!--Poligonos-->
+    <h4>Pol&iacute;gonos Regulares</h4>
+    <img src="img/Poligonos.png" draggable = "false" width="50%">
+    <br>
+    <label>N&uacute;mero de Lados</label>
+    <input id="numeroLados" placeholder="Numero de Lados" class="form-control">
+    <br>
+    <label>Lado:</label>
+    <input id="ladoPoligono" placeholder="Longitud Lado" class="form-control">
+    <br>
+    <label>Apotema:</label>
+    <input id="apotemaPoligono" placeholder="Longitud Apotema" class="form-control">
+    <br>
+    <button onclick="poligono()" class="btn btn-info">Calcular</button>
+    <div id="resultadoPoligono"></div>
+    <br>
+</div>
+</div>
+</div> 
+ </body>
+</html>			

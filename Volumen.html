@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="img/Logo.jpg">
+	<title>Volumen</title>
+	<link rel="stylesheet" type="text/css" href="js-css/bootstrap.min.css">
+	<script src="js-css/main.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h4>Calcular Volumen, &Aacute;rea Lateral y Total de Prismas</h4>
+  <p>Ingresa los datos necesarios para calcular</p>
+  <button class="btn btn-info" onclick="alert(changelogVolumen)">Changelog</button>
+</div>
+<div class="container">
+	<div class="row">
+	<div class="col-sm-3">
+	<label>Pi</label>
+	<input type="text" id="pi" placeholder="Pi" class="form-control">
+	<br>
+	<img src="img/pi.jpg" draggable="false" width="50%">
+	</div>
+	<br>
+<div class= "col-sm-3">
+	<!--prisma triangular-->
+	<h4>Prisma Triangular</h4>
+	<img src="img/PrismaTriangular.jpg" width="30%" draggable = "false">
+	<br>
+	<label>Base:</label>
+	<input id="base" placeholder="Longitud Base" class="form-control">
+	<label>lado 2:</label>
+	<input id="l2pt" placeholder="Longitud Lado" class="form-control">
+	<label>lado 3:</label>
+	<input id="l3pt" placeholder="Longitud Lado" class="form-control">
+	<label>altura base:</label>
+	<input id="apt" placeholder="Altura Triangulo Base" class="form-control">
+	<label>altura prisma:</label>
+	<input id="hpt" placeholder="Altura Prisma" class="form-control">
+	<br>
+	<button onclick="PrismaTriangular()" class="btn btn-info">Calcular</button>
+	<div id="resultadoprismatriangular"></div>
+	<br>
+</div>
+<br>
+	<div class= "col-sm-3">
+	<!--prisma cuadrangular-->
+	<h4>Prisma Cuadrangular</h4>
+	<img src="img/PrismaCuadrangular.jpg" width="30%" draggable = "false">
+	<br>
+	<label>lado 1:</label>
+	<input id="l1pc" placeholder="Longitud Lado" class="form-control">
+	<label>lado 2:</label>
+	<input id="l2pc" placeholder="Longitud Lado" class="form-control">
+	<label>altura:</label>
+	<input id="hpc" placeholder="Altura Prisma" class="form-control">
+	<br>
+	<button onclick="PrismaCuadrangular()" class="btn btn-info">Calcular</button>
+	<div id="resultadoprismacuadrangular"></div>
+</div>
+<br>
+<div class= "col-sm-3">
+	<!--prisma con mas de 4 lados-->
+	<h4>Prisma Con Mas de 4 Lados</h4>
+	<img src="img/PrismaPentagonal.jpg" width="30%" draggable = "false">
+	<img src="img/PrismaHexagonal.jpg" width="30%" draggable = "false">
+	<br>
+	<label>Numero de Lados:</label>
+	<input id="nlprm" placeholder="Numero Lados" class="form-control">
+	<label>lado:</label>
+	<input id="lpm" placeholder="Longitud Lado" class="form-control">
+	<label>apotema:</label>
+	<input id="aprm" placeholder="Apotema" class="form-control">
+	<label>altura:</label>
+	<input id="hpm" placeholder="Altura Prisma" class="form-control">
+	<br>
+	<button onclick="PrismaMasCuatroLados()" class="btn btn-info">Calcular</button>
+	<div id="resultadoprismamascuatrolados"></div>
+</div>
+<br>
+<div class= "col-sm-3">
+	<!--Piramide triangular-->
+	<h4>Pir&aacute;mide Triangular</h4>
+	<img src="img/PiramideTriangular.jpg" width="30%" draggable = "false">
+	<br>
+	<label>Base:</label>
+	<input id="basepit" placeholder="Longitud Base" class="form-control">
+	<label>lado 2:</label>
+	<input id="l2pit" placeholder="Longitud Lado" class="form-control">
+	<label>lado 3:</label>
+	<input id="l3pit" placeholder="Longitud Lado" class="form-control">
+	<label>altura base:</label>
+	<input id="apit" placeholder="Altura Triangulo Base" class="form-control">
+	<label>altura prisma:</label>
+	<input id="hpit" placeholder="Altura Piramide" class="form-control">
+	<label>apotema piramide:</label>
+	<input id="appit" placeholder="Apotema Piramide" class="form-control">
+	<br>
+	<button onclick="PiramideTriangular()" class="btn btn-info">Calcular</button>
+	<div id="resultadopiramidetriangular"></div>
+	<br>
+</div>
+<br>
+<div class= "col-sm-3">
+	<!--Piramide cuadrangular-->
+	<h4>Pir&aacute;mide Cuadrangular</h4>
+	<img src="img/PiramideCuadrangular.jpg" width="30%" draggable = "false">
+	<br>
+	<label>Base:</label>
+	<input id="basepic" placeholder="Longitud Base" class="form-control">
+	<label>Altura de la base:</label>
+	<input id="l2pic" placeholder="Longitud Altura" class="form-control">
+	<label>altura de la piramide:</label>
+	<input id="hpic" placeholder="Altura Piramide" class="form-control">
+	<label>apotema piramide:</label>
+	<input id="appic" placeholder="Apotema Piramide" class="form-control">
+	<br>
+	<button onclick="PiramideCuadrangular()" class="btn btn-info">Calcular</button>
+	<div id="resultadopiramidecuadrangular"></div>
+</div>
+<br>
+<div class="col-sm-3">
+	<!--Piramide con mas de 4 lados-->
+	<h4>Pir&aacute;mide Con Mas de 4 Lados</h4>
+	<img src="img/PiramidePentagonal.jpg" width="30%" draggable = "false">
+	<img src="img/PiramideHexagonal.jpg" width="30%" draggable = "false">
+	<br>
+	<label>Numero de Lados:</label>
+	<input id="nlpim" placeholder="Numero Lados" class="form-control">
+	<label>Lado:</label>
+	<input id="lpim" placeholder="Longitud Lado" class="form-control">
+	<label>apotema de la base:</label>
+	<input id="apim" placeholder="Apotema Base" class="form-control">
+	<label>altura:</label>
+	<input id="hpim" placeholder="Altura Piramide" class="form-control">
+	<label>apotema de la piramide:</label>
+	<input id="appim" placeholder="Apotema Piramide" class="form-control">
+	<br>
+	<button onclick="PiramideMasCuatroLados()" class="btn btn-info">Calcular</button>
+	<div id="resultadopiramidemascuatrolados"></div>
+</div>	
+<div class="col-sm-3">	
+	<!--cilindro-->
+	<h4>Cilindro</h4>
+	<img src="img/Cilindro.jpg" width="40%" draggable = "false">
+	<br>
+	<b>Base:</b>
+	<label>Radio</label>
+	<input id="radio" placeholder="radio" class="form-control">
+	<b>Altura:</b>
+	<input id="alturaci" placeholder="Altura del cilindro" class="form-control">
+	<br>
+	<button onclick="cilindro()" class="btn btn-info">calcular</button>
+	<div id="resultadocilindro"></div>
+</div>
+<div class="col-sm-3">
+	<!--cono-->
+	<h4>Cono</h4>
+	<img src="img/Cono.jpg" width="30%" draggable = "false">
+	<br>
+	<b>Base:</b>
+	<label>Radio</label>
+	<input id="radioco" placeholder="radio" class="form-control">
+	<b>Altura:</b>
+	<input id="alturaco" placeholder="Altura del cono" class="form-control">
+	<b>Generatriz:</b>
+	<input id="generatriz" placeholder="Generatriz del cono" class="form-control">
+	<br>
+	<button onclick="cono()" class="btn btn-info">calcular</button>
+	<div id="resultadocono"></div>
+</div>	
+	<!--esfera-->
+<div class="col-sm-3">
+	<h4>Esfera</h4>
+	<img src="img/Esfera.jpg" width="30%" draggable = "false">
+	<br>
+	<b>Base:</b>
+	<label>Radio</label>
+	<input id="radioesf" placeholder="radio" class="form-control">
+	<br>
+	<button onclick="esfera()" class="btn btn-info">calcular</button>
+	<div id="resultadoesfera"></div>
+</div>
+</div>
+</div>
+</body>
+</html>

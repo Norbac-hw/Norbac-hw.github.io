@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="shortcut icon" href="img/Logo.jpg">
+	<title>Calculadora</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="js-css/bootstrap.min.css">
+    <script src="js-css/main.js"></script>
+	<style type="text/css">
+        body{
+            text-align: center;
+        }
+		button{
+            width: 10%;
+            font-family: monospace;
+		}
+        pre{
+            width: intrinsic; 
+            width: -moz-max-content;
+            width: -webkit-max-content;
+            text-align: right;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        hr{
+            border-top: 2px dashed red;
+        }
+        #residuos{
+            width: intrinsic; 
+            width: -moz-max-content;
+            width: -webkit-max-content;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+        }
+	</style>
+</head>
+<body>
+	<div class="jumbotron text-center">
+  <h4>Calculadora con Procedimiento</h4>
+  <p>Ingresa los n&uacute;meros</p> 
+  <button class="btn btn-info" onclick="alert(changelogCalculadora)">Changelog</button>
+</div>
+	<div class="container">
+<input type="text" class="form-control" name="num1" id="num1" placeholder="n&uacute;mero 1">
+<br>
+<input type="text" class="form-control" name="num2" id="num2" placeholder="n&uacute;mero 2">
+<br>
+<button class="btn btn-info" onclick="suma()">+</button>
+<button class="btn btn-info" onclick="resta()">-</button>
+<button class="btn btn-info" onclick="multilicacion()">*</button>
+<button class="btn btn-info" onclick="division()">&#247;</button>
+<!--<button class="btn btn-info" onclick="raizcuadrada()">&#8730;</button>!-->
+</button>
+<button class="btn btn-info" onclick="mcm(document.getElementById('num1').value, document.getElementById('num2').value)">MCM</button>
+<button class="btn btn-info" onclick="mcd(document.getElementById('num1').value, document.getElementById('num2').value)">MCD</button>
+<br>
+<br>
+<pre id="resultado"></pre>
+<pre id="residuos"></pre>
+<p><b>Nota: </b>Recuerda que tanto en la suma y en la resta con alg&uacute;n n&uacute;mero decimal
+debes alinear los puntos(.), si uno no tiene, poner el punto al final y la cantidad de decimales
+rellenarlos con ceros.</p>
+<p><b>Nota: </b> Para la divisi&oacute;n el n&uacute;mero que va dentro de la casita(galera) es el 
+n&uacute;mero de la primera casilla.</p>
+<p><b>Nota: </b>Para la divisi&oacute;n favor de poner la cantidad de ceros como de decimales 
+se quiera. Ejemplo: 3|5.23 ponerlo como 3|523 &oacute; 3.25|523 ponerlo como 325|52300 &oacute;
+si quieres que 3|5 tenga 3 decimales ponerlo como 3|5000.</p>
+<p><b>Nota: </b>Los <i>undefined</i> del MCM se pueden interpretar como vac&iacute;os o como unos.</p>
+</body>
+</html>
