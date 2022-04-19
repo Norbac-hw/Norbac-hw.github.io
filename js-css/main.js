@@ -1,6 +1,6 @@
-var changelogVolumen = 'Version 1.0.0 \nEl calculador de volúmen Norbac ya está en funcionamiento\n\nVersion 1.1.0 \nSe agregaron unas cosas para la mayor comodidad de uso.\n\nVersión 1.2.0\nOptimización del código\n\nVersión 1.3.0\nMejora de la interfaz web.';
-var changelogCalculadora = 'Versión 1.0.0 \nLa calculadora de Norbac está en funcionamiento con solo operaciones básicas';
-var changelogArea = 'Version 1.0.0 \nEl calculador de área y perímetro de Norbac ya está en funcionamiento.';
+var changelogVolumen = 'Version 1.0.0 \nDisponible al público\n\nVersion 1.1.0 \nSe agregaron unas cosas para la mayor comodidad de uso.\n\nVersión 1.2.0\nOptimización del código\n\nVersión 1.3.0\nMejora de la interfaz web.';
+var changelogCalculadora = 'Versión 1.0.0 \nDisponible al público';
+var changelogArea = 'Version 1.0.0 \nDisponible al público';
 //Volumen
 function PrismaTriangular() {
 	var base = parseFloat(document.getElementById('base').value);
